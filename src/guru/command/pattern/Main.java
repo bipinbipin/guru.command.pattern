@@ -29,7 +29,6 @@ public class Main {
         remoteControl.offButtonPressed(topStopRotateCommand);
 
         System.out.println("-----Testing undoButtonPressed on RemoteControl for RotatingTop-----");
-
         remoteControl.undoButtonPressed();
     }
 }
