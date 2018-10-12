@@ -1,22 +1,27 @@
 package guru.command.pattern;
 
+import guru.command.pattern.commands.*;
+
 public class Main {
 
     public static void main(String[] args) {
-        RemoteControl remoteControl=new RemoteControl();
+        RemoteControl remoteControl = new RemoteControl();
+        Car car = new Car();
+
         System.out.println("-----Testing onButtonPressed on RemoteControl for Car-----");
-        Car car=new Car();
-        CommandBase carMoveCommand=new CarMoveCommand(car);
+        CommandBase carMoveCommand = new CarMoveCommand(car);
         remoteControl.onButtonPressed(carMoveCommand);
+
         System.out.println("-----Testing offButtonPressed on RemoteControl for Car-----");
-        CommandBase carStopCommand=new CarStopCommand(car);
+        CommandBase carStopCommand = new CarStopCommand(car);
         remoteControl.offButtonPressed(carStopCommand);
+
         System.out.println("-----Testing undoButtonPressed() on RemoteControl for Car-----");
         remoteControl.undoButtonPressed();
 
         System.out.println("-----Testing onButtonPressed on RemoteControl for RotatingTop-----");
-        RotatingTop top=new RotatingTop();
-        CommandBase topRotateCommand=new TopRotateCommand(top);
+        RotatingTop top = new RotatingTop();
+        CommandBase topRotateCommand = new TopRotateCommand(top);
         remoteControl.onButtonPressed(topRotateCommand);
 
         System.out.println("-----Testing offButtonPressed on RemoteControl for RotatingTop-----");

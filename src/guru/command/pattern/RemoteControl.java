@@ -1,5 +1,7 @@
 package guru.command.pattern;
 
+import guru.command.pattern.commands.CommandBase;
+
 public class RemoteControl {
     CommandBase onCommand, offCommand, undoCommand;
 

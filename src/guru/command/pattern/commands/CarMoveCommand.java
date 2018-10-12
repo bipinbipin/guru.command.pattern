@@ -1,4 +1,7 @@
-package guru.command.pattern;
+package guru.command.pattern.commands;
+
+import guru.command.pattern.Car;
+import guru.command.pattern.commands.CommandBase;
 
 public class CarMoveCommand implements CommandBase {
     private Car car;

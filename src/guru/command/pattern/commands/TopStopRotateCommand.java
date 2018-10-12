@@ -1,6 +1,9 @@
-package guru.command.pattern;
+package guru.command.pattern.commands;
 
-public class TopStopRotateCommand implements CommandBase{
+import guru.command.pattern.RotatingTop;
+import guru.command.pattern.commands.CommandBase;
+
+public class TopStopRotateCommand implements CommandBase {
     RotatingTop rotatingTop;
     public TopStopRotateCommand(RotatingTop rotatingTop){
         this.rotatingTop=rotatingTop;

@@ -1,6 +1,9 @@
-package guru.command.pattern;
+package guru.command.pattern.commands;
 
-public class CarStopCommand implements CommandBase{
+import guru.command.pattern.Car;
+import guru.command.pattern.commands.CommandBase;
+
+public class CarStopCommand implements CommandBase {
     private Car car;
     public CarStopCommand(Car car){
         this.car=car;
